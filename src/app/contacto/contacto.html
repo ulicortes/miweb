@@ -1,20 +1,72 @@
 <div id="contacto" class="w-screen h-screen bg-[#F5F5F7] flex flex-col justify-evenly items-center">
-    <div
-        class="w-3/4 h-1/2 flex flex-col justify-evenly items-center border border-[#F5F5F7]/40 rounded-3xl px-24 shadow-2xl">
-        <h1 class="text-4xl font-bold text-green-900">Contact me</h1>
-        <div class="w-full flex flex-row justify-evenly">
-            <a href="https://github.com/ulicortes" target="_blank" class="h-15 hover:scale-110 transition duration-300 ease-in-out flex flex-col justify-center items-center">
-                <img class="h-full" src="/github-mark.png" alt="">
-                <p>ulicortes</p>
-            </a>
-            <a target="_blank" class="h-15 hover:scale-110 transition duration-300 ease-in-out flex flex-col justify-center items-center">
-                <img class="h-full" src="/mail_icono.svg" alt="">
-                <p>ulisestcortes@gmail.com</p>
-            </a>
-            <a href="www.linkedin.com/in/ulisescortes" target="_blank" class="h-15 hover:scale-110 transition duration-300 ease-in-out flex flex-col justify-center items-center">
-                <img class="h-full" src="/linkedin.png" alt="">
-                <p>Ulises Cortes</p>
-            </a>
-        </div>
+  <div
+    class="w-3/4 h-3/5 flex flex-col justify-evenly items-center border border-[#F5F5F7]/40 rounded-3xl px-24 shadow-2xl"
+  >
+    <h1 class="text-4xl font-bold text-green-900">Contact me</h1>
+    <div class="w-full py-10 flex flex-row justify-evenly">
+      <a
+        href="https://github.com/ulicortes"
+        target="_blank"
+        class="h-9 hover:scale-110 transition duration-300 ease-in-out flex flex-col justify-center items-center"
+      >
+        <img class="h-full" src="github-mark.png" alt="" />
+        <p>ulicortes</p>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/ulisescortes"
+        target="_blank"
+        class="h-9 hover:scale-110 transition duration-300 ease-in-out flex flex-col justify-center items-center"
+      >
+        <img class="h-full" src="linkedin.png" alt="" />
+        <p>Ulises Cortes</p>
+      </a>
     </div>
+    <form
+      (submit)="sendEmail($event)"
+      class="w-full h-3/4 flex flex-col justify-evenly items-center"
+    >
+      <div class="w-full flex flex-row justify-evenly">
+        <div>
+          <div>
+            <label class="block text-sm font-semibold text-black mb-1">Name</label>
+            <input
+              type="text"
+              name="user_name"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-black mb-1">Email</label>
+            <input
+              type="email"
+              name="user_email"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all"
+            />
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <label class="block text-sm font-semibold text-black mb-1">Message</label>
+            <textarea
+              name="message"
+              rows="4"
+              required
+              class="w-full px-4 py-3 rounded-xl border border-gray-500 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="w-fit h-fit bg-green-600 hover:bg-green-700 text-white font-bold p-1 rounded-xl transition-all transform cursor-pointer hover:-translate-y-1"
+      >
+        Send message
+      </button>
+    </form>
+  </div>
 </div>
