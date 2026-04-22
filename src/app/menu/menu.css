@@ -1,0 +1,11 @@
+@keyframes activo {
+
+  50% {
+    opacity: 0;
+  }
+}
+.teclado {
+  animation-name: activo;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+}

@@ -1,0 +1,63 @@
+<main class="m-0 p-0 bg-[#F5F5F7] overflow-x-hidden">
+  <nav
+    class="w-full h-fit md:h-15 fixed top-0 z-30 bg-white/70 md:bg-white/10 backdrop-blur-md text-black flex flex-col md:flex-row justify-around items-center list-none font-bold"
+  >
+    <li class="block md:hidden items-start py-2" (click)="turn()">
+      <!--<img src="menu.png" width="60" />-->
+      MENU
+    </li>
+    <div
+      [ngClass]="{'hidden md:flex': !phone, 'block': phone}"
+      class="w-full h-120 md:h-fit flex flex-col md:flex-row"
+    >
+      <a
+        (click)="turn()"
+        class="hover:underline h-full w-full flex justify-center items-center"
+        href="#inicio"
+      >
+        <li>Inicio</li>
+      </a>
+      <a
+        (click)="turn()"
+        class="hover:underline h-full w-full flex justify-center items-center"
+        href="#experiencia"
+      >
+        <li>Experience</li>
+      </a>
+      <a
+        (click)="turn()"
+        class="hover:underline h-full w-full flex justify-center items-center"
+        href="#proyectos"
+      >
+        <li>Projects</li>
+      </a>
+      <a
+        (click)="turn()"
+        class="hover:underline h-full w-full flex justify-center items-center"
+        href="#skills"
+      >
+        <li>Skills</li>
+      </a>
+      <a
+        (click)="turn()"
+        class="hover:underline h-full w-full flex justify-center items-center"
+        href="#sobremi"
+      >
+        <li>About me</li>
+      </a>
+      <a
+        (click)="turn()"
+        class="hover:underline h-full w-full flex justify-center items-center"
+        href="#contacto"
+      >
+        <li>Contact</li>
+      </a>
+    </div>
+  </nav>
+  <app-menu />
+  <app-experiencia />
+  <app-proyectos />
+  <app-skills />
+  <app-sobre-mi />
+  <app-contacto />
+</main>
